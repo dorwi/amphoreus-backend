@@ -15,6 +15,7 @@ public class PublicationController {
 
     PublicationRepository publicationRepository;
 
+    @CrossOrigin
     @RequestMapping("/publications")
     public List<Publication> PublicationController() {
         List<Publication> list = new ArrayList<>();
