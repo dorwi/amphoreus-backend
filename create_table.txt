@@ -1,0 +1,18 @@
+CREATE TABLE bulletin(
+  id INT PRIMARY KEY,
+  anneebull TEXT,
+  numbull TEXT,
+  auteur TEXT,
+  auteursimple TEXT,
+  annee TEXT,
+  titre TEXT,
+  inauteurs TEXT,
+  intitre TEXT,
+  collection TEXT,
+  ville TEXT,
+  pages TEXT,
+  cr TEXT,
+  resume TEXT,
+  prod TEXT,
+  cons TEXT
+);
