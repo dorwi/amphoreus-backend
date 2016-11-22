@@ -10,23 +10,37 @@ import javax.persistence.*;
 @Table(name = "bulletin")
 public class Publication {
     @Id
-    @GeneratedValue
     @Column(name = "id")
     private final long id;
+    @Column(columnDefinition = "TEXT")
     private final String anneebull;
+    @Column(columnDefinition = "TEXT")
     private final String numbull;
+    @Column(columnDefinition = "TEXT")
     private final String auteur;
+    @Column(columnDefinition = "TEXT")
     private final String auteursimple;
+    @Column(columnDefinition = "TEXT")
     private final String annee;
+    @Column(columnDefinition = "TEXT")
     private final String titre;
+    @Column(columnDefinition = "TEXT")
     private final String inauteurs;
+    @Column(columnDefinition = "TEXT")
     private final String intitre;
+    @Column(columnDefinition = "TEXT")
     private final String collection;
+    @Column(columnDefinition = "TEXT")
     private final String ville;
+    @Column(columnDefinition = "TEXT")
     private final String pages;
+    @Column(columnDefinition = "TEXT")
     private final String cr;
+    @Column(columnDefinition = "TEXT")
     private final String resume;
+    @Column(columnDefinition = "TEXT")
     private final String prod;
+    @Column(columnDefinition = "TEXT")
     private final String cons;
 
 
