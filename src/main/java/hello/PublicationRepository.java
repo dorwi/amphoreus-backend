@@ -15,6 +15,7 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "publications", path = "publications")
 public interface PublicationRepository extends PagingAndSortingRepository<Publication, Long> {
 
+    @CrossOrigin(origins = "http://localhost:9000")
     @Query(value = "SELECT p FROM Publication p where p.auteur like :auteur")
     List<Publication> findAuteurByRegexp(@Param("auteur") String auteur);
 
