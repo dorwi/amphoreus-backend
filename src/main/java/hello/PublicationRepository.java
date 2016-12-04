@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by dorwi on 07.11.16.
@@ -15,8 +16,16 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "publications", path = "publications")
 public interface PublicationRepository extends PagingAndSortingRepository<Publication, Long> {
 
-    @CrossOrigin(origins = "http://localhost:9000")
     @Query(value = "SELECT p FROM Publication p where p.auteur like :auteur")
     List<Publication> findAuteurByRegexp(@Param("auteur") String auteur);
 
+
+    @Override
+    List<Publication> findAll();
+
+    @Override
+    Publication findOne(Long id);
+
+    @Override
+    Publication save(Publication persisted);
 }
